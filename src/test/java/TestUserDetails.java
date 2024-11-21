@@ -10,7 +10,7 @@ import org.testng.annotations.Test;
 
 public class TestUserDetails {
     @Test
-    public void GetBookDetails()
+    public void GetUserDetails()
     {
         // Specify the base URL to the RESTful web service
         RestAssured.baseURI = "https://reqres.in/api/users";
@@ -43,7 +43,7 @@ public class TestUserDetails {
     }
 
     @Test
-    public void GetBookHeaders() {
+    public void GetUserHeaders() {
         RestAssured.baseURI = "https://reqres.in/api/users";
         RequestSpecification httpRequest = RestAssured.given();
         Response response = httpRequest.get("");
@@ -59,7 +59,7 @@ public class TestUserDetails {
     }
 
     @Test
-    public void WeatherMessageBody()
+    public void GetUserResponseBody()
     {
         RestAssured.baseURI = "https://reqres.in/api/users";
         RequestSpecification httpRequest = RestAssured.given();
@@ -73,7 +73,7 @@ public class TestUserDetails {
         System.out.println("Response Body is: " + body.asString());
     }
     @Test
-    public void VerifyCityInJsonResponse()
+    public void VerifyUserDetailsJSON()
     {
         RestAssured.baseURI = "https://reqres.in/api/users";
         RequestSpecification httpRequest = RestAssured.given();
@@ -94,7 +94,7 @@ public class TestUserDetails {
 
     }
     @Test
-    public void DisplayAllNodesInWeatherAPI()
+    public void DisplayAllNodesInUserAPI()
     {
         RestAssured.baseURI = "https://reqres.in/api/users";
         RequestSpecification httpRequest = RestAssured.given();

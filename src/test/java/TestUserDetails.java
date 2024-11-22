@@ -67,7 +67,7 @@ public class TestUserDetails {
 
         // Retrieve the body of the Response
         ResponseBody body = response.getBody();
-
+        System.out.println(body);
         // By using the ResponseBody.asString() method, we can convert the  body
         // into the string representation.
         System.out.println("Response Body is: " + body.asString());

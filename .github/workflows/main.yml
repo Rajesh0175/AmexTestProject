@@ -28,5 +28,3 @@ jobs:
       with:
         name: go-rest-report
         path: reports/extent/report_*.html
-            
-  

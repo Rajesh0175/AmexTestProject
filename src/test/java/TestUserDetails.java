@@ -122,4 +122,3 @@ public class TestUserDetails {
         System.out.println("City received from Response " + jsonPathEvaluator.get("WindDirectionDegree"));
     }
 }
-

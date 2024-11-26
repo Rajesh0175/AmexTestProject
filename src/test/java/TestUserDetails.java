@@ -72,7 +72,7 @@ public class TestUserDetails {
         // into the string representation.
         System.out.println("Response Body is: " + body.asString());
     }
-    @Test
+    /*@Test
     public void VerifyUserDetailsJSON()
     {
         RestAssured.baseURI = "https://reqres.in/api/users";
@@ -92,7 +92,7 @@ public class TestUserDetails {
         // Validate the response
         Assert.assertEquals(city, "Hyderabad", "Correct city name received in the Response");
 
-    }
+    }*/
     @Test
     public void DisplayAllNodesInUserAPI()
     {

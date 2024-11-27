@@ -2,8 +2,8 @@
 <suite name="Test Suite">
     <test name="TestClassesExecution">
         <classes>
-            <class name="GetAPITests"/>
-            <class name="TestUserDetails"/>
+            <class name="org.amex.GetUserDetails"/>
+            <class name="org.amex.GetAPITests"/>
         </classes>
     </test>
 </suite>

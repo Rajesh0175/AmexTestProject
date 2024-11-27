@@ -1,3 +1,5 @@
+package org.amex;
+
 import io.restassured.RestAssured;
 import io.restassured.http.Header;
 import io.restassured.http.Headers;
@@ -8,7 +10,7 @@ import io.restassured.specification.RequestSpecification;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class TestUserDetails {
+public class GetUserDetails {
     @Test
     public void GetUserDetails()
     {

@@ -1,11 +1,12 @@
-name: Java Maven Tests
+name: Java Maven Tests with events dispatches
 
 on:
-  workflow_dispatch:
+  repository_dispatch:
+    types: do-something
 
 jobs:
   test:
-    name: Run Maven Tests
+    name: Run Maven Tests using Dispatch
     runs-on: ubuntu-latest
 
     steps:

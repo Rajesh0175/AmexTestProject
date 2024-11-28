@@ -1,8 +1,15 @@
 name: Java Maven Tests with events dispatches
 
 on:
-  repository_dispatch:
-    types: do-something
+  workflow_dispatch:
+    inputs:
+      key1:
+        description: "A sample input"
+        required: true
+      key2:
+        description: "Another sample input"
+        required: false
+        default: "default_value"
 
 jobs:
   test:

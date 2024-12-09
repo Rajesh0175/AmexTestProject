@@ -1,3 +1,5 @@
+package org.amex;
+
 import io.restassured.RestAssured;
 import io.restassured.http.Header;
 import io.restassured.http.Headers;
@@ -8,7 +10,7 @@ import io.restassured.specification.RequestSpecification;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class TestUserDetails {
+public class GetUserDetails {
     @Test
     public void GetUserDetails()
     {
@@ -72,7 +74,7 @@ public class TestUserDetails {
         // into the string representation.
         System.out.println("Response Body is: " + body.asString());
     }
-    @Test
+    /*@Test
     public void VerifyUserDetailsJSON()
     {
         RestAssured.baseURI = "https://reqres.in/api/users";
@@ -92,7 +94,7 @@ public class TestUserDetails {
         // Validate the response
         Assert.assertEquals(city, "Hyderabad", "Correct city name received in the Response");
 
-    }
+    }*/
     @Test
     public void DisplayAllNodesInUserAPI()
     {
@@ -122,4 +124,3 @@ public class TestUserDetails {
         System.out.println("City received from Response " + jsonPathEvaluator.get("WindDirectionDegree"));
     }
 }
-

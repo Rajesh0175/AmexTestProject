@@ -1,0 +1,56 @@
+name: Java Maven Tests with events dispatches
+
+on:
+  workflow_dispatch:
+    inputs:
+      key1:
+        description: "A sample input"
+        required: true
+      key2:
+        description: "Another sample input"
+        required: false
+        default: "default_value"
+
+jobs:
+  test:
+    name: Run Maven Tests using Dispatch
+    runs-on: ubuntu-latest
+
+    steps:
+      # Step 1: Check out the repository
+      - name: Check out code
+        uses: actions/checkout@v3
+
+      # Step 2: Set up JDK
+      - name: Set up JDK 17
+        uses: actions/setup-java@v3
+        with:
+          distribution: 'temurin' # Use 'zulu' or 'adopt' as alternatives if preferred
+          java-version: '17'
+
+      # Step 3: Cache Maven dependencies
+      - name: Cache Maven dependencies
+        uses: actions/cache@v3
+        with:
+          path: ~/.m2/repository
+          key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
+          restore-keys: |
+            ${{ runner.os }}-maven-
+
+      # Step 4: Run Maven commands
+      - name: Run Tests
+        run: mvn clean test
+
+      # Step 5: Archive test results (optional)
+      - name: Archive Test Reports
+        if: always() # Always run even if the tests fail
+        uses: actions/upload-artifact@v3
+        with:
+          name: test-results
+          path: target/surefire-reports/
+
+
+
+
+
+          

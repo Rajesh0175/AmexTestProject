@@ -1,0 +1,9 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Test Suite">
+    <test name="TestClassesExecution">
+        <classes>
+            <class name="org.amex.GetUserDetails"/>
+            <class name="org.amex.GetAPITests"/>
+        </classes>
+    </test>
+</suite>

@@ -1,5 +1,4 @@
 name: Run Maven Test using push event
-
 on:
   push:
     branches: [ "main" ]
